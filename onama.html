@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Apartman Stari Vlah</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link href="lightbox.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="lightbox.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="homeLink"><img src="images/logo.png" class="logoApartmana"></a>
+        <div class="headerElements">
+            <a href="index.html" class="headerLink"><h1 class="naslov">Početna</h1></a>
+            <a href="galerija.html" class="headerLink"><h1 class="naslov">Galerija</h1></a>
+            <a href="book.html" class="headerLink"><h1 class="naslovMain" >Rezerviši</h1></a>
+            <a href="onama.html" class="headerLink"><h1 class="naslov" >O nama</h1></a>
+            <a href="kontakt.html" class="headerLink"><h1 class="naslov" >Kontakt</h1></a>
+        </div>
+        <div class="outsideLinks">
+            <div class="bookingDiv" onclick="openBooking()">
+                <img src="images/bookingLogo.png" class="bookingLogo" alt="Booking.com">
+                <p class="bookingParagraph">Stari Vlah</p>
+            </div>
+            <div class="instagramDiv" onclick="openInstagram()">
+                <img src="images/instagramLogo.png" class="instagramLogo" alt="Instagram">
+                <p class="instagramParagraph">starivlah_zlatibor</p>
+            </div>
+        </div>
+    </header>
+    <div class="aboutDiv">
+        <h1 class="aboutNameHeader">
+            Stari Vlah
+        </h1>
+        <h1 class="aboutHeader">O NAMA</h1>
+        <p class="aboutParagraph">Apartman Stari Vlah se nalazi u srcu Zlatibora, jedne od najlepših planinskih destinacija u Srbiji. Okolina je obeležena netaknutom prirodom, prostranim livadama, gustim šumama i čistim planinskim vazduhom. Zlatibor nudi bogat izbor aktivnosti za sve posetioce. Možete istražiti magične staze i staze koje vode kroz prelepe pejzaže i pružaju nezaboravne poglede na planinske vrhove. Za ljubitelje aktivnog odmora, tu su i brojne mogućnosti za planinarenje, vožnju biciklom, jahanje ili vožnju motora. U neposrednoj blizini nalazi se Zlatiborsko jezero, idealno mesto za opuštanje i uživanje u mirnom okruženju. Možete plivati, voziti se čamcem ili jednostavno uživati u šetnji duž obale. Zlatibor je poznat i po bogatoj gastronomiji. U blizini se nalaze brojni restorani i kafići u kojima možete probati tradicionalna jela i specijalitete ovog kraja. Uživajte u svemu što Zlatibor nudi i stvorite nezaboravne uspomene tokom boravka u našem apartmanu. Dobro došli na Zlatibor!</p>
+        <img src="images/kolaz1.png" class="aboutKolaz">
+        <h1 class="aboutLocation">LOKACIJA NA MAPI</h1>
+        <div class="locationDiv">
+            <iframe class="locationFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.914939230589!2d19.69879927600675!3d43.73309387109844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47582f91b82cbc6f%3A0xc9446a1d2cf0c061!2z0J3QuNC60L7Qu9C1INCQ0LvRgtC-0LzQsNC90L7QstC40ZvQsCA2LCDQl9C70LDRgtC40LHQvtGA!5e0!3m2!1ssr!2srs!4v1734360304343!5m2!1ssr!2srs" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <footer>
+        <div class="mainFooterDiv">
+            <div class="footerDivFirst">
+                <a href="galerija.html" class="footerNav">Galerija</a>
+                <a href="kalendar.html" class="footerNav">Kalendar</a>
+            </div>
+            <div class="footerDivSecond">
+                <a href="onama.html" class="footerNav">O nama</a>
+                <a href="kontakt.html" class="footerNav">Kontakt</a>
+            </div>
+        </div>
+        <h1 class="builtBy">DuleBondok @ 2024</h1>
+        <div class="footerInfoDiv">
+            <div class="footerPhoneDiv">
+                <img src="images/phone.png" class="footerIcon">
+                <p class="footerParagraph">+381 61 2423 547</p>
+            </div>
+            <div class="footerMailDiv">
+                <img src="images/mail.png" class="footerIcon">
+                <p class="footerParagraph">starivlah@gmail.com</p>
+            </div>
+            <div class="footerLocationDiv">
+                <img src="images/location.png" class="footerIcon">
+                <p class="footerParagraph">Nikole Altomanovića 6, Zlatibor</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Apartman Stari Vlah</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="homeLink"><img src="images/logo.png" class="logoApartmana"></a>
+        <div class="headerElements">
+            <a href="index.html" class="headerLink"><h1 class="naslov">Početna</h1></a>
+            <a href="galerija.html" class="headerLink"><h1 class="naslov">Galerija</h1></a>
+            <a href="book.html" class="headerLink"><h1 class="naslov" >Rezerviši</h1></a>
+            <a href="onama.html" class="headerLink"><h1 class="naslov" >O nama</h1></a>
+            <a href="kontakt.html" class="headerLink"><h1 class="naslov" >Kontakt</h1></a>
+        </div>
+        <div class="outsideLinks">
+            <div class="bookingDiv" onclick="openBooking()">
+                <img src="images/bookingLogo.png" class="bookingLogo" alt="Booking.com">
+                <p class="bookingParagraph">Stari Vlah</p>
+            </div>
+            <div class="instagramDiv" onclick="openInstagram()">
+                <img src="images/instagramLogo.png" class="instagramLogo" alt="Instagram">
+                <p class="instagramParagraph">starivlah_zlatibor</p>
+            </div>
+        </div>
+    </header>
+    <div class="imgDiv">
+        <img src="images/dnevna.jpg" class="apartmanImg">
+        <img src="images/dvosed.jpeg" class="apartmanImg">
+        <img src="images/spavaca.jpeg" class="apartmanImg">
+        <button class="reservationBtn" onclick="location.href='book.html'">
+            Pošalji zahtev za rezervaciju
+        </button>
+    </div>
+    <footer>
+        <div class="mainFooterDiv">
+            <div class="footerDivFirst">
+                <a href="galerija.html" class="footerNav">Galerija</a>
+                <a href="kalendar.html" class="footerNav">Kalendar</a>
+            </div>
+            <div class="footerDivSecond">
+                <a href="onama.html" class="footerNav">O nama</a>
+                <a href="kontakt.html" class="footerNav">Kontakt</a>
+            </div>
+        </div>
+        <h1 class="builtBy">DuleBondok @ 2024</h1>
+        <div class="footerInfoDiv">
+            <div class="footerPhoneDiv">
+                <img src="images/phone.png" class="footerIcon">
+                <p class="footerParagraph">+381 61 2423 547</p>
+            </div>
+            <div class="footerMailDiv">
+                <img src="images/mail.png" class="footerIcon">
+                <p class="footerParagraph">starivlah@gmail.com</p>
+            </div>
+            <div class="footerLocationDiv">
+                <img src="images/location.png" class="footerIcon">
+                <p class="footerParagraph">Nikole Altomanovića 6, Zlatibor</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

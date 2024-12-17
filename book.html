@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Apartman Stari Vlah</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link href="lightbox.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="lightbox.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="fullScreenDiv" id="fullScreenDiv">
+        <div class="confirmationMsgDiv">
+            <h1 class="reservationDetails">DETALJI REZERVACIJE</h1>
+            <div class="fullNameDetailsDiv" id="fullNameDetailsDiv">
+                <h1 class="fullNameHeader">Ime i prezime: </h1>
+            </div>
+            <div class="phoneNumberDetailsDiv" id="phoneNumberDetailsDiv">
+                <h1 class="phoneNumberHeader">Broj telefona: </h1>
+            </div>
+            <div class="emailAddressDetailsDiv" id="emailAddressDetailsDiv">
+                <h1 class="emailAddressHeader">Imejl adresa: </h1>
+            </div>
+            <div class="checkInDateDetailsDiv" id="checkInDateDetailsDiv">
+                <h1 class="checkInDateHeader">Datum prijave: </h1>
+            </div>
+            <div class="checkOutDateDetailsDiv" id="checkOutDateDetailsDiv">
+                <h1 class="checkOutDateHeader">Datum odjave: </h1>
+            </div>
+            <div class="checkInTimeDetailsDiv" id="checkInTimeDetailsDiv">
+                <h1 class="checkInTimeHeader">Vreme prijave: </h1>
+            </div>
+            <button class="okayBtn" id="okayBtn">U REDU</button>
+
+        </div>
+    </div>
+    <header class="header">
+        <a href="index.html" class="homeLink"><img src="images/logo.png" class="logoApartmana"></a>
+        <div class="headerElements">
+            <a href="index.html" class="headerLink"><h1 class="naslov">Početna</h1></a>
+            <a href="galerija.html" class="headerLink"><h1 class="naslov">Galerija</h1></a>
+            <a href="book.html" class="headerLink"><h1 class="naslovMain" >Rezerviši</h1></a>
+            <a href="onama.html" class="headerLink"><h1 class="naslov" >O nama</h1></a>
+            <a href="kontakt.html" class="headerLink"><h1 class="naslov" >Kontakt</h1></a>
+        </div>
+        <div class="outsideLinks">
+            <div class="bookingDiv" onclick="openBooking()">
+                <img src="images/bookingLogo.png" class="bookingLogo" alt="Booking.com">
+                <p class="bookingParagraph">Stari Vlah</p>
+            </div>
+            <div class="instagramDiv" onclick="openInstagram()">
+                <img src="images/instagramLogo.png" class="instagramLogo" alt="Instagram">
+                <p class="instagramParagraph">starivlah_zlatibor</p>
+            </div>
+        </div>
+    </header>
+    <div class="bookDiv">
+        <h1 class="bookHeader">REZERVIŠITE SVOJ BORAVAK</h1>
+        <p class="bookParagraph">Molimo Vas da popunite sva polja, a zatim rezervaciju potvrdite pritiskom na dugme "Potvrdi". Osoblje apartmana će Vas u najkraćem periodu kontaktirati radi dogovora.</p>
+        <div class="bookFormDiv">
+            <label class="fullNameLabel">
+                <span class="fullNameSpan">Ime i prezime:</span>
+                <input type="text" class="form_input" placeholder="Nikola Nikolic" id="fullName">
+            </label>
+            <label class="fullNameLabel">
+                <span class="fullNameSpan">Broj telefona:</span>
+                <input type="number" class="form_input" placeholder="+381 1234567" id="phoneNumber">
+            </label>
+            <label class="fullNameLabel">
+                <span class="fullNameSpan">Imejl adresa:</span>
+                <input type="email" class="form_input" placeholder="nikolanikolic@gmail.com" id="emailAddress">
+            </label>
+            <label class="fullNameLabel">
+                <span class="fullNameSpan">Datum prijave u objekat:</span>
+                <input type="date" class="form_input" id="checkInDate">
+            </label>
+            <label class="fullNameLabel">
+                <span class="fullNameSpan">Datum odjave iz objekta:</span>
+                <input type="date" class="form_input" id="checkOutDate">
+            </label>
+            <label class="fullNameLabel">
+                <span class="fullNameSpan">Vreme prijave<i style="font-size: 1rem;"> (nije obavezno):</i></span>
+                <input type="time" class="form_input" id="checkInTime">
+            </label>
+            <button class="confirmBtn" id="confirmBtn">POTVRDI</button>
+
+        </div>
+    </div>
+    <footer>
+        <div class="mainFooterDiv">
+            <div class="footerDivFirst">
+                <a href="galerija.html" class="footerNav">Galerija</a>
+                <a href="kalendar.html" class="footerNav">Kalendar</a>
+            </div>
+            <div class="footerDivSecond">
+                <a href="onama.html" class="footerNav">O nama</a>
+                <a href="kontakt.html" class="footerNav">Kontakt</a>
+            </div>
+        </div>
+        <h1 class="builtBy">DuleBondok @ 2024</h1>
+        <div class="footerInfoDiv">
+            <div class="footerPhoneDiv">
+                <img src="images/phone.png" class="footerIcon">
+                <p class="footerParagraph">+381 61 2423 547</p>
+            </div>
+            <div class="footerMailDiv">
+                <img src="images/mail.png" class="footerIcon">
+                <p class="footerParagraph">starivlah@gmail.com</p>
+            </div>
+            <div class="footerLocationDiv">
+                <img src="images/location.png" class="footerIcon">
+                <p class="footerParagraph">Nikole Altomanovića 6, Zlatibor</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

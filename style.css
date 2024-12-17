@@ -1,0 +1,854 @@
+@font-face {
+    font-family: SourGummy;
+    src: url(fonts/SourGummy.ttf);
+}
+
+@font-face {
+    font-family: NewsReader;
+    src: url(fonts/NewsReader.ttf);
+}
+
+@font-face {
+    font-family: Marcellus;
+    src: url(fonts/Marcellus.ttf);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: rgb(37, 37, 37);
+    height: 14vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20vh;
+}
+
+.header {
+    background-color: rgb(37, 37, 37);
+    height: 20vh;
+    width: 100%;
+    position: fixed;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    z-index: 2;
+}
+
+.logoApartmana {
+    max-width: 78%;
+    max-height: 78%;
+    border: 2px solid #1f683b;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.naslov {
+    color: white;
+    font-family: SourGummy;
+    font-weight: 400;
+    font-size: 1.6rem;
+    border: 2px solid #1f683b;
+    padding: 0.5vw;
+    border-radius: 10%;
+    box-shadow: inset 0 0 0 0 #1f683b;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.naslov:hover {
+    box-shadow: inset 120px 0 0 0 #1f683b;
+    color: white;
+    cursor: pointer;
+}
+
+.naslovMain {
+    color: white;
+    font-family: SourGummy;
+    font-weight: 400;
+    font-size: 1.6rem;
+    border: 2px solid #d77b18;
+    padding: 0.5vw;
+    border-radius: 10%;
+    box-shadow: inset 0 0 0 0 #d77b18;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    display: inline-block; /* Ensures smooth scaling */
+    animation: scaleEffect 1s infinite; /* Apply the animation */
+}
+
+.naslovMain:hover {
+    box-shadow: inset 120px 0 0 0 #d77b18;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes scaleEffect {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.2); /* Slightly larger */
+    }
+}
+
+.headerElements {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+
+.outsideLinks {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    left: 3vw;
+    position: relative;
+    gap: 0.1vw;
+}
+
+.bookingLogo {
+    height: 20%;
+    width: 20%;
+}
+
+.instagramLogo {
+    height: 20%;
+    width: 20%;
+}
+
+.instagramDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 0.6vw;
+    padding-left: 1vw;
+}
+
+.instagramDiv:hover {
+    cursor: pointer;
+    background-color: rgb(55, 54, 54);
+}
+
+.bookingDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 0.6vw;
+    padding-left: 1vw;
+}
+
+.bookingDiv:hover {
+    cursor: pointer;
+    background-color: rgb(55, 54, 54);
+}
+
+.bookingParagraph {
+    font-size: 1.3rem;
+    font-family: NewsReader;
+    color: white;
+    text-decoration: none;
+    background:
+    linear-gradient(
+      to right,
+      #1f683b,
+      #1f683b
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.bookingParagraph:hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+.instagramParagraph {
+    font-size: 1.3rem;
+    font-family: NewsReader;
+    color: white;
+    text-decoration: none;
+    background:
+    linear-gradient(
+      to right,
+      #1f683b,
+      #1f683b
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.instagramParagraph:hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+.homeLink {
+    width: 10vw;
+    height: auto;
+}
+
+.imgDiv {
+    margin-top: 20vh;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.apartmanImg
+{
+    width: 33%;
+    border: 3px solid black;
+}
+
+.reservationBtn {
+    position: absolute;
+    top: 40vh;
+    left: 40vw;
+    width: 20vw;
+    height: 8vh;
+    border-radius: 10px;
+    font-family: SourGummy;
+    font-size: 1rem;
+    animation: buttonPulse 1s infinite;
+    border: none;
+}
+
+.reservationBtn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    animation: none;
+    background-color: #1f683b;
+    color: white;
+    border: 1px solid black;
+}
+
+.mainFooterDiv {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    height: 13vh;
+    gap: 1vh;
+}
+
+.footerDivFirst {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 2vh;
+    justify-content: center;
+    align-items: left;
+}
+
+.footerDivSecond {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 2vh;
+    justify-content: center;
+    align-items: left;
+}
+
+.footerNav {
+    color: white;
+    font-family: NewsReader;
+    text-decoration: none;
+    width: fit-content;
+    padding: 0.5vh;
+}
+
+.footerNav:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: burlywood;
+    color: black;
+}
+
+
+.footerInfoDiv {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 13vh;
+    position: relative;
+    left: 20vh;
+}
+
+.footerMailDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 4.3vh;
+    gap: 1vh;
+}
+.footerPhoneDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 4.3vh;
+    gap: 1vh;
+}
+
+.footerLocationDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 4.3vh;
+    gap: 1vh;
+}
+
+.footerIcon {
+    width: 3vh;
+}
+
+.footerParagraph {
+    font-size: 1rem;
+    color: white;
+    font-family: SourGummy;
+}
+
+.builtBy {
+    font-family: SourGummy;
+    font-size: 1rem;
+}
+
+.headerLink {
+    text-decoration: none;
+}
+
+.galleryDiv {
+    width: 100%;
+    height: 440vh;
+    background-color: rgb(32, 32, 32);
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.exteriorHeader {
+   margin-left: 10vh;
+   font-family: NewsReader;
+   color: #d77b18;
+   margin-top: 10vh;
+   border-bottom: 1px solid white;
+   width: 84%;
+   padding-bottom: 2vh;
+}
+
+.exteriorImages {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10vh;
+    width: 60%;
+    gap: 5vh;
+}
+
+.exteriorImagesSecond {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10vh;
+    width: 60%;
+    gap: 5vh;
+    margin-top: 5vh;
+}
+
+.exteriorImg {
+    width: 40vh;
+    border: 1px solid white;
+}
+
+.aboutDiv {
+    width: 100%;
+    height: 275vh;
+    background-color:rgb(32, 32, 32) ;
+    margin-top: 20vh;
+}
+
+.aboutNameHeader {
+    color: #d77b18;
+    margin-left: 10.2vw;
+    margin-top: 10vh;
+    font-family: Marcellus;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    font-weight: 300;
+}
+
+.aboutHeader {
+    color: #d77b18;
+    margin-left: 10vw;
+    margin-top: -0.9vh;
+    font-family: Marcellus;
+    letter-spacing: 0.2rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
+    width: 80%;
+}
+
+.aboutParagraph {
+    color: white;
+    font-family: SourGummy;
+    margin-left: 10vw;
+    font-size: 1.3rem;
+    width: 80%;
+    line-height: 2rem;
+}
+
+.aboutLocation {
+    color: #d77b18;
+    margin-left: 10vw;
+    margin-top: 12vh;
+    font-family: Marcellus;
+    letter-spacing: 0.2rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
+    width: 80%;
+}
+
+.aboutKolaz {
+    width: 40vw;
+    left: 31vw;
+    position: relative;
+    margin-top: 3vh;
+    border: 2px solid white;
+}
+
+.locationDiv {
+    position: absolute;
+    left: 31vw;
+}
+
+.locationFrame {
+    width: 40vw;
+    height: 80vh;
+    margin-top: 8vh;
+    border: 2px solid white;
+}
+
+.contactDiv {
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(32, 32, 32) ;
+    margin-top: 20vh;
+}
+
+.phoneDiv {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin-left: 10vw;
+    gap: 1vw;
+    align-items: center;
+}
+
+.phoneHeader {
+    font-size: 1rem;
+    color: white;
+    font-family: Marcellus;
+    letter-spacing: 0.5rem;
+}
+
+.phoneOrange {
+    width: 2.2vw;
+    height: 2.2vw;
+}
+
+.phoneNumber {
+    font-size: 1.8rem;
+    color: #d77b18;
+    font-family: Marcellus;
+    letter-spacing: 0.5rem;
+    margin-left: 12vw;
+    margin-top: -0.5vh;
+}
+
+.mailDiv {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin-left: 10vw;
+    gap: 1vw;
+    align-items: center;
+}
+
+.mailOrange {
+    width: 2.2vw;
+    height: 2.2vw;
+}
+
+.mailHeader
+{
+    font-size: 1rem;
+    color: white;
+    font-family: Marcellus;
+    letter-spacing: 0.5rem;
+}
+
+.mailAddress {
+    font-size: 1.8rem;
+    color: #d77b18;
+    font-family: Marcellus;
+    letter-spacing: 0.5rem;
+    margin-left: 12vw;
+    margin-top: -0.5vh;
+}
+
+.instagramContactDiv {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin-left: 10vw;
+    gap: 1vw;
+    align-items: center;
+}
+
+.instagramOrange {
+    width: 2.2vw;
+    height: 2.2vw;
+}
+
+.instagramHeader
+{
+    font-size: 1rem;
+    color: white;
+    font-family: Marcellus;
+    letter-spacing: 0.5rem;
+}
+
+.instagramAddress {
+    font-size: 1.8rem;
+    color: #d77b18;
+    font-family: Marcellus;
+    letter-spacing: 0.5rem;
+    margin-left: 12vw;
+    margin-top: -0.5vh;
+}
+
+.locationContactDiv {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin-left: 10vw;
+    gap: 1vw;
+    align-items: center;
+}
+
+.locationOrange {
+    width: 2.2vw;
+    height: 2.2vw;
+}
+
+.locationHeader
+{
+    font-size: 1rem;
+    color: white;
+    font-family: Marcellus;
+    letter-spacing: 0.5rem;
+}
+
+.locationAddress {
+    font-size: 1.8rem;
+    color: #d77b18;
+    font-family: Marcellus;
+    letter-spacing: 0.5rem;
+    margin-left: 12vw;
+    margin-top: -0.5vh;
+}
+
+.bookDiv {
+    width: 100%;
+    height: 140vh;
+    background-color:rgb(32, 32, 32) ;
+    margin-top: 20vh;
+}
+
+.bookHeader {
+    font-size: 2rem;
+    color: #d77b18;
+    font-family: Marcellus;
+    letter-spacing: 0.5rem;
+    margin-left: 32vw;
+    margin-top: 5vh;
+}
+
+.bookParagraph {
+    color: white;
+    font-family: SourGummy;
+    margin-left: 25.7vw;
+    font-size: 1.3rem;
+    width: 55%;
+    line-height: 2rem;
+}
+
+.bookFormDiv {
+    width: 55%;
+    height: 100vh;
+    margin-left: 25vw;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 6vh;
+}
+
+.fullNameLabel {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #d77b1849;
+    border-radius: 1vh;
+    width: 50%;
+    height: 8vh;
+}
+
+.fullNameSpan {
+    color: white;
+    font-family: Marcellus;
+    margin-left: 2vw;
+    margin-top: -2vh;
+    background-color:rgb(32, 32, 32) ;
+    width: fit-content;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    font-size: 1.2rem;
+}
+
+.form_input {
+    font-family: NewsReader;
+    font-size: 1rem;
+    height: 6vh;
+    outline: none;
+    border: none;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    padding-left: 2vh;
+}
+
+.confirmBtn {
+    width: 30%;
+    height: 8vh;
+    margin-left: 4.8vw;
+    font-size: 1.3rem;
+    font-family: Marcellus;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    background-color: #d77b18;
+    color: white;
+    border: none;
+}
+
+.confirmBtn:hover {
+    cursor: pointer;
+    background-color: #985309;
+}
+
+.fullScreenDiv {
+    display: none;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.875);
+    width: 100%;
+    height: 174vh;
+    z-index: 5;
+}
+
+.confirmationMsgDiv {
+    border: 1px solid white;
+    height: 50vh;
+    width: 32vw;
+    position: fixed;
+    top: 22vh;
+    background-color: rgb(190, 190, 190);
+}
+
+.reservationDetails {
+    font-family: Marcellus;
+    font-size: 1rem;
+    margin-left: 2vw;
+    border-bottom: 1px solid rgb(92, 92, 92);
+    width: 70%;
+    padding-bottom: 0.5vh;
+}
+
+.fullNameDetailsDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.fullNameHeader {
+    font-family: SourGummy;
+    font-size: 1rem;
+    margin-left: 2vh;
+}
+
+.fullNameNewValue {
+    font-family: Marcellus;
+    font-size: 1rem;
+    margin-left: 1vh;
+    color: #d77b18;
+}
+
+.phoneNumberDetailsDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.phoneNumberHeader {
+    font-family: SourGummy;
+    font-size: 1rem;
+    margin-left: 2vh;
+}
+
+.phoneNumberNewValue {
+    font-family: Marcellus;
+    font-size: 1rem;
+    margin-left: 1.5vh;
+    color: #d77b18;
+}
+
+.emailAddressDetailsDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.emailAddressHeader {
+    font-family: SourGummy;
+    font-size: 1rem;
+    margin-left: 2vh;
+}
+
+.emailAddressNewValue {
+    font-family: Marcellus;
+    font-size: 1rem;
+    margin-left: 2.2vh;
+    color: #d77b18;
+}
+
+.checkInDateDetailsDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkInDateHeader {
+    font-family: SourGummy;
+    font-size: 1rem;
+    margin-left: 2vh;
+}
+
+.checkInDateNewValue {
+    font-family: Marcellus;
+    font-size: 1rem;
+    margin-left: 2.1vh;
+    color: #d77b18;
+}
+
+.checkOutDateDetailsDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkOutDateHeader {
+    font-family: SourGummy;
+    font-size: 1rem;
+    margin-left: 2vh;
+}
+
+.checkOutDateNewValue {
+    font-family: Marcellus;
+    font-size: 1rem;
+    margin-left: 2.4vh;
+    color: #d77b18;
+}
+
+.checkInTimeDetailsDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkInTimeHeader {
+    font-family: SourGummy;
+    font-size: 1rem;
+    margin-left: 2vh;
+}
+
+.checkInTimeNewValue {
+    font-family: Marcellus;
+    font-size: 1rem;
+    margin-left: 2.7vh;
+    color: #d77b18;
+}
+
+.okayBtn {
+    margin-left: 11vw;
+    margin-top: 2vh;
+    height: 5vh;
+    width: 9vw;
+    background-color: #1e914a;
+    border: none;
+    font-family: Marcellus;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.okayBtn:hover {
+    cursor: pointer;
+    background-color: #1f683b;
+}
+
+
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+        background-color: #1f683b;
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: #1e914a;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #1f683b;
+    }
+}
+
+
+
+
