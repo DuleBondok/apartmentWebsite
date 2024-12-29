@@ -689,11 +689,12 @@ footer {
 
 .confirmationMsgDiv {
     border: 1px solid white;
-    height: 50vh;
+    height: 62vh;
     width: 32vw;
     position: fixed;
-    top: 22vh;
+    top: 14vh;
     background-color: rgb(190, 190, 190);
+    border-radius: 1vh;
 }
 
 .reservationDetails {
@@ -815,7 +816,7 @@ footer {
 
 .okayBtn {
     margin-left: 11vw;
-    margin-top: 2vh;
+    margin-top: 4vh;
     height: 5vh;
     width: 9vw;
     background-color: #1e914a;
@@ -825,11 +826,58 @@ footer {
     letter-spacing: 0.1rem;
     font-size: 1rem;
     color: black;
+    border: 1px solid black;
 }
 
 .okayBtn:hover {
     cursor: pointer;
     background-color: #1f683b;
+}
+
+.numberOfPersonsDiv {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+}
+
+.numberOfPersonsLabel {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #d77b1849;
+    border-radius: 1vh;
+    width: 14vw;
+    height: 8vh;
+}
+
+.numberOfPersonsSpan {
+    color: white;
+    font-family: Marcellus;
+    margin-left: 2vw;
+    margin-top: -2vh;
+    background-color:rgb(32, 32, 32) ;
+    width: fit-content;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    font-size: 1.2rem;
+}
+
+.announcmentDiv {
+    border-bottom: 1px solid rgb(96, 96, 96);
+    border-top: 1px solid rgb(96, 96, 96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.announcmentHeader {
+    font-family: NewsReader;
+    font-size: 1rem;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.15);
 }
 
 

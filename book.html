@@ -5,12 +5,14 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Apartman Stari Vlah</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <link href="lightbox.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/style.css'>
+    <link href="/styles/lightbox.css" rel="stylesheet">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="lightbox.js"></script>
-    <script src="script.js" defer></script>
+    <script src="scripts/lightbox.js"></script>
+    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> <!-- Importujem flatpickr biblioteku-->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>   <!-- Importujem flatpickr biblioteku-->
 </head>
 <body>
     <div class="fullScreenDiv" id="fullScreenDiv">
@@ -34,6 +36,7 @@
             <div class="checkInTimeDetailsDiv" id="checkInTimeDetailsDiv">
                 <h1 class="checkInTimeHeader">Vreme prijave: </h1>
             </div>
+            <div class="announcmentDiv" id="announcmentDiv"></div>
             <button class="okayBtn" id="okayBtn">U REDU</button>
 
         </div>
@@ -84,10 +87,31 @@
             </label>
             <label class="fullNameLabel">
                 <span class="fullNameSpan">Vreme prijave<i style="font-size: 1rem;"> (nije obavezno):</i></span>
-                <input type="time" class="form_input" id="checkInTime">
+                <input type="time" class="form_input" id="checkInTime" placeholder="14:30">
             </label>
             <button class="confirmBtn" id="confirmBtn">POTVRDI</button>
 
+        </div>
+        <div class="numberOfPersonsDiv">
+            <label class="numberOfPersonsLabel">
+                <span class="numberOfPersonsSpan">Broj odraslih:</span>
+                <input type="number" id="numberOfAdults" list="cityList" class="form_input" max="4" min="1">
+                <datalist id="numberOfAdultsList">
+                <option value="1">
+                <option value="1">
+                <option value="3">
+                <option value="4">
+                </datalist>
+            </label>
+            <label class="numberOfPersonsLabel">
+                <span class="numberOfPersonsSpan">Broj dece:</span>
+                <input type="number" id="numberOfKids" list="cityList" class="form_input" max="3" min="0">
+                <datalist id="numberOfKidsList">
+                <option value="1">
+                <option value="1">
+                <option value="3">
+                </datalist>
+            </label>
         </div>
     </div>
     <footer>

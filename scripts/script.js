@@ -10,6 +10,7 @@ let confirmBtn = document.getElementById("confirmBtn");
 let fullScreenDiv = document.getElementById("fullScreenDiv");
 let fullName = document.getElementById("fullName");
 let fullNameDetailsDiv = document.getElementById("fullNameDetailsDiv");
+let announcmentDiv = document.getElementById("announcmentDiv");
 
 let phoneNumber = document.getElementById("phoneNumber");
 let phoneNumberDetailsDiv = document.getElementById("phoneNumberDetailsDiv");
@@ -26,20 +27,73 @@ let checkOutDateDetailsDiv = document.getElementById("checkOutDateDetailsDiv");
 let checkInTime = document.getElementById("checkInTime");
 let checkInTimeDetailsDiv = document.getElementById("checkInTimeDetailsDiv");
 
+let numberOfAdults = document.getElementById("numberOfAdults");
+let numberOfKids = document.getElementById("numberOfKids");
+
+let totalPrice;
+
+const today = new Date().toISOString().split('T')[0];
+checkInDate.setAttribute("min", today);
+
+const tomorrow = new Date();
+tomorrow.setDate(new Date().getDate() + 1);
+const formattedTomorrow = tomorrow.toISOString().split('T')[0];
+
+checkOutDate.setAttribute("min", formattedTomorrow);
+
 confirmBtn.addEventListener("click", function(event) {
     let fullNameValue = fullName.value;
     let phoneNumberValue = phoneNumber.value;
     let emailAddressValue = emailAddress.value;
     let checkInDateValue = checkInDate.value;
     let checkOutDateValue = checkOutDate.value;
+    let numberOfAdultsValue = numberOfAdults.value;
+    let numberOfKidsValue = numberOfKids.value;
 
-    if(fullNameValue.trim() === "" || phoneNumberValue.trim() === "" || emailAddressValue.trim() === "" || !checkInDateValue || !checkOutDateValue)
+    let numberOfAdultsParse = parseInt(numberOfAdultsValue, 10);
+    let numberOfKidsParse = parseInt(numberOfKidsValue, 10);
+
+    if(fullNameValue.trim() === "" || phoneNumberValue.trim() === "" || emailAddressValue.trim() === "" || !checkInDateValue || !checkOutDateValue || !numberOfAdultsValue)
     {
         event.preventDefault();
         alert("Obavezna polja moraju biti popunjena!");
     }
     else {
-        fullScreenDiv.style.display = "flex";
+
+    const checkIn = new Date(checkInDateValue);
+    const checkOut = new Date(checkOutDateValue);
+
+    if (checkOut <= checkIn) {
+        event.preventDefault();
+        alert("Datum odjave mora biti posle datuma prijave!");
+        return;
+    }
+
+    if (numberOfAdultsValue > 4 || numberOfAdultsValue < 1) {
+        event.preventDefault();
+        alert("Broj odraslih može biti najmanje 1, a najviše 4.");
+        return;
+    }
+
+    if(numberOfKidsValue > 3 || numberOfKidsValue < 0)
+    {
+        event.preventDefault();
+        alert("Broj dece može biti najmanje 0, a najviše 3.");
+        return;
+    }
+
+    if((numberOfAdultsParse + numberOfKidsParse) > 4)
+    {
+        event.preventDefault();
+        alert("Maksimalan broj osoba je 4!");
+        return;
+    }
+
+    const nights = Math.round((checkOut - checkIn) / (1000 * 60 * 60 * 24));
+    console.log(nights);
+    totalPrice = (numberOfAdultsParse * 15 + numberOfKidsParse * 5) * nights;
+    console.log(totalPrice);
+    fullScreenDiv.style.display = "flex";
 
     let fullNameNewValue = document.createElement("h1");
     fullNameNewValue.innerHTML = fullNameValue;
@@ -79,6 +133,11 @@ confirmBtn.addEventListener("click", function(event) {
 
     checkInTimeNewValue.className = "checkInTimeNewValue";
     checkInTimeDetailsDiv.appendChild(checkInTimeNewValue);
+
+    let announcmentHeader = document.createElement("h1");
+    announcmentHeader.innerHTML = `Poštovani, ukupna cena vašeg boravka od ${nights} noćenja iznosi ${totalPrice}e.`;
+    announcmentHeader.className = "announcmentHeader";
+    announcmentDiv.appendChild(announcmentHeader);
 }});
 
 let okayBtn = document.getElementById("okayBtn");
@@ -86,3 +145,15 @@ let okayBtn = document.getElementById("okayBtn");
 okayBtn.addEventListener("click", function() {
     fullScreenDiv.style.display = "none";
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const checkInTime = document.getElementById("checkInTime");
+
+    flatpickr(checkInTime, {
+        enableTime: true,           // Enables time selection
+        noCalendar: true,           // Disables calendar (time-only picker)
+        dateFormat: "H:i",          // Sets 24-hour format (HH:mm)
+        time_24hr: true, 
+        minuteIncrement: 30             // Ensures 24-hour time format
+    });
+});
